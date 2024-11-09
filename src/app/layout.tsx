@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/navbar';
-import '../styles/globals.css';
+import './globals.css';
 import Footer from '@/components/footer';
 import AppWalletProvider from '@/components/app-wallet-provider';
 
