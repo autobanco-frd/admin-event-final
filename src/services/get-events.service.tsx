@@ -1,25 +1,37 @@
-import { EventManager } from "@/utils/idl/idl-event-manager";
-import { Program } from "@coral-xyz/anchor";
-import { Connection, PublicKey } from "@solana/web3.js";
-import { EventAccount, getEvents } from "./get-events.service";
-import { gainVaultPda, treasuryVaultPda } from "@/utils/find-pdas";
-import { Account, getAccount } from "@solana/spl-token";
+import { BN, Program } from "@coral-xyz/anchor";
+import { PublicKey } from "@solana/web3.js";
+import { EventManager } from "../utils/idl/idl-event-manager";
 
-export interface MyEventInfo {
-  event: EventAccount;
-  treasuryVault: Account | undefined;
-  gainVault: Account | undefined;
+export interface EventAccountInfo {
+    id: string;
+    name:string;
+    ticketPrice: BN;
+    active:boolean;
+    sponsors: BN;
+    ticketsSold: BN;
+    treasuryVaultTotal: BN;
+    gainVaultTotal: BN;
+    authority: PublicKey;
+    acceptedMint: PublicKey;
+    eventBump: number;
+    eventMintBump: number;
+    treasuryVaultBump: number;
+    gainVaultBump: number;
 }
 
-export async function getMyEvents(connection: Connection, program: Program<EventManager>,  publicKey: PublicKey){
-    
-    try {
-      const events = await getEvents(program);
-      const myEvents = events.filter((event) => event.account.authority.toString() == publicKey.toString());
+export interface EventAccount {
+    publicKey: PublicKey;
+    account: EventAccountInfo;
+}
 
-      return myEvents
-    } catch (e) {
-      console.log("EL ERROR: ", e);
-    }
+export async function getEvents(program: Program<EventManager>){
+    try {
+        const events = await program.account.event.all();
+        const eventsFormated = events.map((event) => event as EventAccount);
+        console.log("EVENTS: ", eventsFormated);
+        return eventsFormated
+      } catch (e) {
+        console.log("EL ERROR: ", e);
+      }
     return []
 };

@@ -1,14 +1,17 @@
 'use client';
 import { CreateEventFeature } from '@/components/create-event/create-event.feature';
-import EventCard from '@/components/event-card';
+import EventCard from '../components/event-card';
 import WalletInfo from '@/components/wallet-info';
 import { EventAccount, getEvents } from '@/services/get-events.service';
 import { useEventManagerProgram } from '@/utils/solana';
 import { useEffect, useState } from 'react';
 
+
+
 export default function Home() {
   const program = useEventManagerProgram();
   const [events, setEvents] = useState<EventAccount[]>([]);
+  
 
   const getAllEvents = async () => {
     try {

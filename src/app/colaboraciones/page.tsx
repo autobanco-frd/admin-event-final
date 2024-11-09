@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import {
   getSponsoredEvents,
   SponsoredEvent,
-} from '@/services/get-sponsored-events.service';
+} from '../../services/get-sponsored-event.service';
 
 export default function Collaborations() {
   const program = useEventManagerProgram();
