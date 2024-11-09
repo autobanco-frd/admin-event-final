@@ -113,14 +113,14 @@ export default function CreateEventModal({
               type="button"
               onClick={onClose}
               disabled={loading}
-              className="rounded-md bg-gray-200 px-4 py-2 font-medium text-gray-700 hover:bg-gray-300"
+              className="rounded-md bg-stone-200 px-4 py-2 font-medium text-gray-700 hover:bg-gray-300"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={loading}
-              className="rounded-md bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-600"
+              className="rounded-md bg-purple-500 px-4 py-2 font-medium text-white hover:bg-purple-600"
             >
               {loading ? "Creando..." : "Crear Evento"}
             </button>

@@ -64,14 +64,14 @@ export default function WalletInfo() {
               onClick={getAirdropOnClick}
               disabled={isLoading}
               type="button"
-              className="bg-indigo-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-indigo-400 disabled:bg-gray-300 disabled:text-gray-600 disabled:cursor-not-allowed"
+              className="bg-purple-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-purple-400 disabled:bg-gray-300 disabled:text-gray-600 disabled:cursor-not-allowed"
             >
               {isLoading ? 'Obteniendo airdrop...' : 'Solicitar Airdrop'}
             </button>
             <button
               onClick={getBalance}
               type="button"
-              className="bg-indigo-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-indigo-400 "
+              className="bg-purple-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-purple-400 "
             >
               Alctualizar Saldo
             </button>

@@ -49,7 +49,7 @@ export default function Collaborations() {
           </h3>
           <Link
             href="/"
-            className="bg-indigo-300 w-50 text-black mt-5 font-semibold px-4 py-1 rounded hover:text-white hover:bg-indigo-400"
+            className="bg-purple-300 w-50 text-black mt-5 font-semibold px-4 py-1 rounded hover:text-white hover:bg-purple-400"
           >
             Explorar eventos
           </Link>

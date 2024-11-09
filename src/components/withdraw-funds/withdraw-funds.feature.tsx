@@ -28,7 +28,7 @@ export function WithdrawFundsFeature(event: EventAccount) {
 
   return (
     <>
-    <button className="bg-indigo-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-indigo-400"
+    <button className="bg-purple-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-purple-400"
                 onClick={() => setIsModalOpen(true)}>
           Retirar Fondos 
         </button>

@@ -4,7 +4,7 @@ import { WithdrawEarningsFeature } from "./withdraw-earnings/withdraw-earnings.f
 
 export default function CollaborationCard(sponsoredEvent: CollaborationCardProp) {
   return (
-    <div className="bg-gray-200 p-6 rounded-lg shadow-md hover:shadow-xl hover:border hover:border-indigo-100">
+    <div className="bg-stone-200 p-6 rounded-lg shadow-md hover:shadow-xl hover:border hover:border-purple-100">
       <h3 className="font-bold mb-2 text-xl text-center">{sponsoredEvent.event.account.name}</h3>
       <p className="mb-5 text-lg text-center"> Colaboraste con: {sponsoredEvent.tokens.toFixed(0)} tokens</p>
       <div>

@@ -36,7 +36,7 @@ export default function CloseEventModal({
         </div>
         <div className="flex gap-6 justify-end">
           <button
-            className="bg-indigo-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-indigo-400"
+            className="bg-purple-300 text-black font-semibold px-4 py-2 rounded basis-[50%] hover:text-white hover:bg-purple-400"
             onClick={onClose}
           >
             Cancelar

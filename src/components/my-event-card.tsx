@@ -5,7 +5,7 @@ import { WithdrawFundsFeature } from "./withdraw-funds/withdraw-funds.feature";
 
 export default function MyEventCard(myEvent: EventAccount) {
   return (
-    <div className="bg-gray-200 p-6 rounded-lg shadow-md hover:shadow-xl hover:border hover:border-indigo-100">
+    <div className="bg-stone-200 p-6 rounded-lg shadow-md hover:shadow-xl hover:border hover:border-purple-100">
       <h3 className="font-bold mb-4 text-xl text-center">{myEvent.account.name}</h3>
       <div className="flex gap-6 justify-center">
             <div className="px-4 py-2 rounded basis-[50%] bg-white mb-4">
